@@ -5,7 +5,7 @@ from flask_mysqldb import MySQL
 
 
 from db import db
-from resources.user import UserRegister, User
+from resources.user import CustomerRegister, GetCustomer, DeleteCustomer, PutCustomer
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
@@ -20,12 +20,13 @@ app.config['MYSQL_DB'] = os.environ.get("MYSQL_DB")
 mysql = MySQL(app)
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.secret_key = "SOMETHING"
 api = Api(app)
 
 
-api.add_resource(UserRegister, "/register/")
-api.add_resource(User, "/user/<int:user_id>/")
+api.add_resource(CustomerRegister, "/customer/create")
+api.add_resource(GetCustomer, "/customer/<int:user_id>/")
+api.add_resource(DeleteCustomer, "/customer/delete/<int:user_id>/")
+api.add_resource(PutCustomer, "/customer/put/<int:user_id>/")
 
 
 if __name__ == "__main__":

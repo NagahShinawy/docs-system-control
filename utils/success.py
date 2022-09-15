@@ -1,1 +1,2 @@
-CREATED_SUCCESSFULLY = "User created successfully."
+CREATED_SUCCESSFULLY = "Customer created successfully."
+UPDATED_SUCCESSFULLY = "Customer Updated successfully."
