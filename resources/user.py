@@ -21,6 +21,7 @@ class UserRegister(Resource):
     """
     create new user
     """
+
     def post(self):
         data = _user_parser.parse_args()
 
@@ -60,4 +61,3 @@ class User(Resource):
             }, status.HTTP_404_NOT_FOUND
         user.delete_from_db()
         return "", status.HTTP_204_NO_CONTENT
-
