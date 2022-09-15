@@ -1,5 +1,5 @@
 from flask_restful import Resource, reqparse
-from models.user import CustomerModel
+from models.customer import CustomerModel
 from utils import status
 from utils.errors import (
     BLANK_ERROR,
