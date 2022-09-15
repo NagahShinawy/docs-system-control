@@ -6,7 +6,6 @@ from flask_mysqldb import MySQL
 
 from db import db
 from resources.user import UserRegister, User
-from utils import status
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
